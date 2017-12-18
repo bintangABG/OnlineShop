@@ -56,6 +56,11 @@
               </tr>
             </c:forEach>
         </table>
+        
+        <h1>TOTAL HARGA : $ ${carts}</h1>
+                    </div>
+                    <button href="${pageContext.request.contextPath}/product" class="btn btn-danger">Bayar</button>
+                </div>
         <jsp:include page="footer.jsp"/> 
     </body>
 </html>

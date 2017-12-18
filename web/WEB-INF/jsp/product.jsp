@@ -55,7 +55,7 @@
                 <tr>
                     <td>${d.namaproduct}</td>
                     <td>${d.harga}</td>
-                    <td><image src="<c:url value="/resources/image/${d.gambar}" />"/> </td>
+                    <td><image src="<c:url value="/resources/image/${d.gambar}" />" width="250px" height="200px"/> </td>
                     <td> 
                        <c:if test="${empty sessionScope.user}">
                             <li><a href="${pageContext.request.contextPath}/login"><button class="btn btn-primary">Add to cart</button></a></li>
