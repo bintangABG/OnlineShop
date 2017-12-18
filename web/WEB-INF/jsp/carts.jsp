@@ -42,7 +42,6 @@
         
         <table id="customers">
   <tr>
-    <th>ID</th>
     <th>Nama</th>
     <th>Harga</th>
     <th>Aksi</th>
@@ -50,7 +49,6 @@
      <c:forEach var="d" items="${cart.carts}">
      </tr>
      <tr>
-         <td>${d.key}</td>
           <td>${d.value.namaproduct}</td>
           <td>${d.value.harga}</td>
           <td><a href="${pageContext.request.contextPath}/cart/${d.value.id}/${d.key}"> Hapus </a></td>

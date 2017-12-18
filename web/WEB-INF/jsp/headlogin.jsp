@@ -12,9 +12,10 @@
             <ul class="nav navbar-nav">
                 <li ><a href="${pageContext.request.contextPath}">Home</a></li>
 
-                <li><a href="#">Produk</a></li>
+                <li><a href="${pageContext.request.contextPath}/product/all">Produk</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="${pageContext.request.contextPath}/cart/show"><span class="glyphicon glyphicon-shopping-cart"></span>Cart : ${cart.carts.size()}</a></li>
                 <li><a href="${pageContext.request.contextPath}/logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
             </ul>
         </div>
