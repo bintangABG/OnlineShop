@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Form Registration</title>
+        <title>Form Registration</title>    
         <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
         <link href="<c:url value="/resources/css/login.css" />" rel="stylesheet">
     </head>

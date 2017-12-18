@@ -15,6 +15,7 @@
                 <li><a href="${pageContext.request.contextPath}/product/all">Produk</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="${pageContext.request.contextPath}/cart/show"><span class="glyphicon glyphicon-user"></span>Cart : ${cart.carts.size()}</a></li>
                 <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>

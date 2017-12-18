@@ -4,7 +4,7 @@
 <head>
 <style>
 .footer {
-   position: relative;
+   position: fixed;
    width: 100%;
    height: 50px;
    bottom: 0;

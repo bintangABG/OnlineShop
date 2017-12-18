@@ -1,18 +1,16 @@
 <%-- 
-    Document   : product
-    Created on : Dec 13, 2017, 3:00:33 PM
+    Document   : carts
+    Created on : Dec 18, 2017, 9:09:41 AM
     Author     : user
 --%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet"/>
-        <link href="<c:url value="/resources/css/login.css" />" rel="stylesheet">
-        <title>Data Produk</title>
-        
+        <title>JSP Page</title>
         <style>
             #customers {
                 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -37,7 +35,6 @@
                 color: white;
             }
             </style>
-        
     </head>
     <body>
         <jsp:include page="head.jsp"/> 
@@ -45,20 +42,19 @@
         
         <table id="customers">
   <tr>
-    <th>Nama Produk</th>
+    <th>ID</th>
+    <th>Nama</th>
     <th>Harga</th>
-    <th>Gambar</th>
     <th>Aksi</th>
     
-     <c:forEach var="d" items="${products}">
+     <c:forEach var="d" items="${cart.carts}">
      </tr>
      <tr>
-         <td>${d.namaproduct}</td>
-          <td>${d.harga}</td>
-          <td><image src="<c:url value="/resources/image/${d.gambar}" />"/> </td>
-          <td> 
-          <a href="${pageContext.request.contextPath}/cart/add/${d.id}"><button class="btn btn-primary">Add to Cart</button></a>
-          </td>
+         <td>${d.key}</td>
+          <td>${d.value.namaproduct}</td>
+          <td>${d.value.harga}</td>
+          <td><a href="${pageContext.request.contextPath}/cart/${d.value.id}/${d.key}"> Hapus </a></td>
+          
               </tr>
             </c:forEach>
         </table>
