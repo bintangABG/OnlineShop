@@ -30,7 +30,7 @@
             #customers tr:hover {background-color: #ddd;}
 
             #customers th {
-                padding-top: 12px;
+                bpadding-top: 12px;
                 padding-bottom: 12px;
                 text-align: left;
                 background-color: #6495ed;
@@ -44,22 +44,30 @@
         <h1>Data Product</h1>
         
         <table id="customers">
-  <tr>
-    <th>Nama Produk</th>
-    <th>Harga</th>
-    <th>Gambar</th>
-    <th>Aksi</th>
-    
-     <c:forEach var="d" items="${products}">
-     </tr>
-     <tr>
-         <td>${d.namaproduct}</td>
-          <td>${d.harga}</td>
-          <td><image src="<c:url value="/resources/image/${d.gambar}" />"/> </td>
-          <td> 
-          <a href="${pageContext.request.contextPath}/cart/add/${d.id}"><button class="btn btn-primary">Add to Cart</button></a>
-          </td>
-              </tr>
+            <tr>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Gambar</th>
+                <th>Aksi</th>
+
+                <c:forEach var="d" items="${products}">
+                </tr>
+                <tr>
+                    <td>${d.namaproduct}</td>
+                    <td>${d.harga}</td>
+                    <td><image src="<c:url value="/resources/image/${d.gambar}" />"/> </td>
+                    <td> 
+                       <c:if test="${empty sessionScope.user}">
+                            <li><a href="${pageContext.request.contextPath}/login"><button class="btn btn-primary">Add to cart</button></a></li>
+                       
+        
+                            </c:if>
+                        <c:if test="${not empty sessionScope.user}">
+                          <a href="${pageContext.request.contextPath}/cart/add/${d.id}" ><button class="btn btn-primary">Add to cart</button> </a>
+                          
+                        </c:if> 
+                    </td>
+                </tr>
             </c:forEach>
         </table>
         <jsp:include page="footer.jsp"/> 

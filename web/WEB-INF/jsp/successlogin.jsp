@@ -15,7 +15,7 @@
         <link href="<c:url value="/resources/css/login.css" />" rel="stylesheet">
     </head>
     <body>
-        <jsp:include page="headlogin.jsp"/> 
+        <jsp:include page="head.jsp"/> 
         <div class="container">
             <h1>${user.username}, Anda berhasil Login</h1>
             

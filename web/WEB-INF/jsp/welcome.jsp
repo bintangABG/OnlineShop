@@ -16,15 +16,7 @@
     </head>
     <body>
         <jsp:include page="head.jsp"/>
-        <div class="container">
-            
-
-            <h1>${pesan}</h1>
-            
-            
-            
-        </div>
-            
+        
         <jsp:include page="footer.jsp"/>
             
     </body>
