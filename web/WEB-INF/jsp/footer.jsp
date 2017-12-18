@@ -22,7 +22,7 @@
 <p>The footer is placed at the bottom of the page.</p>-->
 
 <div class="footer" >
-  <p>Footer </p>
+  <p>@copyright Jodhy 2017</p>
 </div>
 
 </body>

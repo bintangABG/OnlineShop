@@ -21,9 +21,9 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <c:if test="${empty sessionScope.user}">
-                        <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
                         <li><a href="${pageContext.request.contextPath}/register">SignUp</a></li>
-                        </c:if>
+                        <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
+                        </c:if>  
                         <c:if test="${not empty sessionScope.user}">
                         <li><a href="${pageContext.request.contextPath}/cart/show">Chart : ${cart.carts.size()}</a></li>
                         <li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
